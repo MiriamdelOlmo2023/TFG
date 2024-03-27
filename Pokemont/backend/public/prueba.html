@@ -12,15 +12,14 @@
             .then(response => response.json())
             .then(data => {
                 const pokemon = data.results[0];
-                const gsUrl = pokemon.cromo;
-                const httpUrl = gsUrl.replace('gs://', 'https://storage.googleapis.com/');
-                
+
                 document.getElementById('pokemonData').innerHTML = `
                     <h2>${pokemon.nombre}</h2>
                     <p>Generación: ${pokemon.generacion}</p>
                     <p>${pokemon.cromo}</p>
-                    <p>${httpUrl}</p>
-                    <img src="${httpUrl}" alt="${pokemon.nombre}"></img>
+                    <img src="${pokemon.cromo.replace('gs://', 'https://storage.googleapis.com/')}" alt="${pokemon.nombre}"></img>
+                    <p>${pokemon.frente}</p>
+                    <img src="${pokemon.frente.replace('gs://', 'https://storage.googleapis.com/')}" alt="${pokemon.nombre}"></img>
                 `;
             })
             .catch(error => console.error('Error fetching data:', error));

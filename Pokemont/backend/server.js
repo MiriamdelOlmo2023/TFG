@@ -16,23 +16,7 @@ const pool = new Pool({
     }
 });
 
-// // Función para insertar un archivo en la base de datos
-// async function insertarArchivo(nombre, tipo, rutaArchivo) {
-//     try {
-//         const imageData = fs.readFileSync(rutaArchivo);
 
-//         const query = 'INSERT INTO media (nombre, tipo, archivo) VALUES ($1, $2, $3)';
-//         const values = [nombre, tipo, imageData];
-
-//         await pool.query(query, values);
-//         console.log('Archivo insertado correctamente en la base de datos.');
-//     } catch (error) {
-//         console.error('Error al insertar archivo:', error);
-//     }
-// }
-
-// // Ejemplo de cómo usar la función para insertar un archivo
-// insertarArchivo('1', 'imagen', 'libro/1.png');
 
 // Endpoint de ejemplo para obtener datos de la base de datos
 app.get('/data', async (req, res) => {
