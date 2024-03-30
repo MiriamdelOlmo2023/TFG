@@ -30,7 +30,7 @@ p{
 
 .page-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 3 columnas iguales */
   gap: 10px; /* Espacio entre las imágenes */

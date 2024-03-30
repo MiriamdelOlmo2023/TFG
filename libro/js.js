@@ -32,11 +32,5 @@ function handlePageClick() {
     return;
   }
   event.stopPropagation();
-  // window.alert('Página clickeada');
 }
 
-
-function foto(event) {
-  var imageId = event.target.id;
-  window.alert("ID de la imagen: " + imageId);
-}
