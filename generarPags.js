@@ -1,5 +1,5 @@
 function generateImages() {
-  const totalImages = 105;
+  const totalImages = 151;
   const imagesPerPage = 16;
   const totalPages = Math.ceil(totalImages / imagesPerPage);
 
@@ -33,6 +33,16 @@ function generateImages() {
       }
 
       // Agregar div.page-content al div.page y luego agregar la página al contenedor
+      pageDiv.appendChild(pageContentDiv);
+      container.appendChild(pageDiv);
+    }
+    
+    if (containers.length % 2 !== 0) {
+      const pageDiv = document.createElement("div");
+      pageDiv.classList.add("page");
+      const pageContentDiv = document.createElement("div");
+      pageContentDiv.classList.add("page-content");
+      pageContentDiv.setAttribute("onclick", "handlePageClick()");
       pageDiv.appendChild(pageContentDiv);
       container.appendChild(pageDiv);
     }
