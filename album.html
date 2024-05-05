@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon't</title>
+  <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="equipo">
+    <div id="1" class="selected" onclick="casillaSeleccionada(event)"></div>
+    <div id="2" class="selected" onclick="casillaSeleccionada(event)"></div>
+    <div id="3" class="selected" onclick="casillaSeleccionada(event)"></div>
+    <div id="4" class="selected" onclick="casillaSeleccionada(event)"></div>
+    <div id="5" class="selected" onclick="casillaSeleccionada(event)"></div>
+    <div id="6" class="selected" onclick="casillaSeleccionada(event)"></div>
+  </div>
+
+  <div class="book">
+    <div id="pages" class="pages">
+      <div class="page" id="page-portada">
+        <img id="titulo" src="src/imgs/tituloPortada.png"/>
+        <img id="portada" src="src/imgs/portada.jpg"/>
+      </div>
+    </div>
+  </div>
+
+  <img src="src/imgs/logo.png" class="logo">
+  
+  <div id="shiny">
+    <input type="checkbox" class="shiny" id="shinyCheckbox" name="shinyCheckbox" value="shiny">
+    <label for="shinyCheckbox">Shiny</label>
+  </div>
+  
+
+  <button id="terminarEquipo" class="pokemon-button" onclick="combatir()">¡COMBATIR!</button>
+
+  <script src="generarPags.js"></script>
+  <script src="js.js"></script>
+</body>
+
+</html>

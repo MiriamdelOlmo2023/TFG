@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-
 function handlePageClick() {
   if (!event.stopPropagation) {
     return;
@@ -34,3 +33,14 @@ function handlePageClick() {
   event.stopPropagation();
 }
 
+function casillaSeleccionada(event) {
+  var casillaId = event.target.id;
+  var casilla = document.getElementById(casillaId);
+  
+  var elementosSeleccionados = document.querySelectorAll('.selectedCasilla');
+  elementosSeleccionados.forEach(function(elemento) {
+    elemento.classList.remove('selectedCasilla');
+  });
+  
+  casilla.classList.add('selectedCasilla');
+}

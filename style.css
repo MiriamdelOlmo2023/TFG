@@ -1,16 +1,19 @@
-html,
+
+@font-face {
+  font-family: 'pokemon';
+  src: url('src/PokemonSolid.ttf') format('truetype')
+}
+
 body {
-  font-family: 'Lovers Quarrel', cursive;
-  background: #2e2d2d;
+  /* background: #2e2d2d; */
+  background-image: url('src/imgs/bg4.jpg');
+  background-repeat: initial;
+  background-size: cover;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .book {
   transition: opacity 0.4s 0.2s;
-}
-
-#title:hover{
-  color:blueviolet
 }
 
 p{
@@ -51,10 +54,6 @@ p{
   margin-top: 20px;
 }
 
-#title {
-  display: block;
-}
-
 .page:before {
   content: '';
   position: absolute;
@@ -81,6 +80,7 @@ p{
 .page:nth-child(even) {
   clear: both;
 }
+
 .book {
   perspective: 250vw;
   display: flex;
@@ -189,3 +189,112 @@ p{
   background-position: right top;
 }
 
+/*PORTADA*/
+#portada {
+  height: 800px;
+  margin-top: 12px;
+}
+
+#page-portada {
+  background-color: #168ac3;
+}
+
+#titulo {
+  position:absolute; 
+  height: 200px;
+  margin-top: 440px;
+  margin-left: 60px;
+}
+
+
+/*LOGO*/
+.logo {
+  height: 130px;
+  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  border-radius: 25px;
+}
+
+
+/*EQUIPO*/
+#equipo {
+  /* background-color: #1689c37c; */
+  background-color: #031802a2;
+  width: 270px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+  margin-top: -8px;
+  margin-left: -10px;
+}
+
+.selected {
+  background-color: rgba(255, 255, 255, 0.322);
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.selected:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.selectedCasilla {
+  background-color: rgba(255, 255, 255, 0.637);
+}
+
+/*BOTON*/
+.pokemon-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: help;
+  font-weight: bold;
+  outline: none;
+  position: relative;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.pokemon-button:hover {
+  background-color: #d32f2f;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pokemon-button:hover {
+  animation: pulse 0.5s infinite;
+}
+
+#shiny {
+  position: relative;
+  position: fixed;
+  bottom: 90px;
+  right: 110px;
+  font-size: 17px;
+  color: white;
+  font-family: pokemon;
+  letter-spacing: 3px;
+}

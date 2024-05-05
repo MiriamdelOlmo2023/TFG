@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokemon't</title>
-  <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-  <div class="book">
-    <div id="pages" class="pages">
-      <div class="page">
-        <h1 style="text-align: center; margin-top: 200px; font-size: 70px;">Portada guapa</h1>
-      </div>
+  <img src="src/imgs/logo.png" class="logo">
+  <div id="divDS">
+    <img src="src/imgs/ds.png" id="ds">
+    <div id="pantallaArriba">
+        <video src="src/imgs/maletin.mp4" id="dsArriba" autoplay></video>
+        <video src="src/imgs/PokIzq.mp4" id="pokeballIzq" class="pokeball-video"></video>
+        <video src="src/imgs/pkmcentro.mp4" id="pokeballCentro" class="pokeball-video"></video>
+        <video src="src/imgs/PokeDer.mp4" id="pokeballDer" class="pokeball-video"></video>
+        <h3 id="textBocadillo">Elige tu equipo para poder combatir.</h3>
     </div>
-  </div>
-  <script src="generarPags.js"></script>
-  <script src="js.js"></script>
-</body>
+    <div id="pantallaAbajo">
+        <img src="src/imgs/dsAbajo.png" id="dsAbajo">
+    </div>
+</div>
 
+  <button id="playButton">Reproducir</button>
+  <script src="video.js"></script>
+</body>
 </html>
